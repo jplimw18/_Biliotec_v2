@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biliotec</title>
+    <link rel="stylesheet" href="Assets/CSS/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" id="logo">
+                <figure>
+                    <img src="Assets/img/biblioteca-icon.png" alt="Logo BIBLIOTEC">
+                    <figcaption>Bibliotec</figcaption>
+                </figure>
+            </a>
+            
+            <form action="" method="get" id="form-pesquisa">
+                <!-- <select name="filtro-pesquisa" id="filtro-pesquisa">
+                    <option value="todos" selected>Todos</option>
+                    <option value="historia">História</option>
+                    <option value="ficcao">Ficção</option>
+                    <option value="filosofia">Filosofia</option>
+                    <option value="investigacao">Investigação</option>
+                    <option value="tecnologia">Tecnologia</option>
+                </select> -->
+                <input type="text" name="bar-pesquisa" id="bar-pesquisa" placeholder="Livros, autores...">
+                <button type="submit" id="btn-pesquisa"></button>
+            </form>
+            
+            <ul id="menu">
+                <li>
+                    <Button id="btn-login-cadastro">
+                        <figure>
+                            <img src="Assets/img/login-icon.png" alt="ícone login">
+                            <figcaption>Login</figcaption>
+                        </figure>
+                        <!-- <img src="Assets/img/user-icon-invert.png" alt="Botão de Login e/ou Cadastro"> -->
+                    </Button>
+
+                    <section id="regiao-login" aria-label="Região login" class="escondido">
+                        <form action="" method="post" id="form-login">
+                            <button id="btn-close-login">
+                                <img src="Assets/img/close.png" alt="Fechar área login">
+                            </button>
+                            
+                            <legend>Faça Login</legend>
+                            <div>
+                                <label for="txt-email-login">Email: </label>
+                                <input type="text" name="txt-email-login" id="txt-email-login">
+                            </div>
+
+                            <div>
+                                <label for="txt-pass-login">Senha: </label>
+                                <input type="password" name="txt-pass-login" id="txt-pass-login">
+                            </div>
+
+                            <button type="submit" id="btn-login" class="btn-logar">Entrar</button>
+                        </form>
+                    </section>
+                </li>
+                <li>
+                    <button id="btn-mais-opcoes" class="escondido">
+                        <img src="Assets/img/Triangle-invert.png" alt="Botão Mais opções">
+                    </button>
+                    
+                    <section id="regiao-mais-opcoes" class="escondido">
+                        <ul>
+                            <li class="item-mais-opcoes">
+                                <figure>
+                                    <img src="Assets/img/pencil.png" alt="Ícone editar perfil">
+                                    <figcaption>Editar Perfil</figcaption>
+                                </figure>
+                            </li>
+                            <li class="item-mais-opcoes">
+                                <figure>
+                                    <img src="Assets/img/book.png" alt="Ícone editar perfil">
+                                    <figcaption>Meus empréstimos</figcaption>
+                                </figure>
+                            </li>
+                            <li class="item-mais-opcoes">
+                                <figure>
+                                    <img src="Assets/img/estrela.png" alt="Ícone editar perfil">
+                                    <figcaption>Meus favoritos</figcaption>
+                                </figure>
+                            </li>
+                            <li class="item-mais-opcoes">
+                                <figure>
+                                    <img src="Assets/img/bell.png" alt="Ícone editar perfil">
+                                    <figcaption>Notificações</figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                    </section>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        
+        <section aria-label="região resultados de pesquisa" class="main-regions" id="regiao-resultado-pesquisa">
+            <h2>Resultados para "Harry Potter"</h2>
+            
+            <article class="item-resultado-pesquisa">
+                <figure>
+                    <img src="Assets/img/livro1.jpg" alt="Capa do livro 'Harry Potter e o Cálice de Fogo'" height="300" loading="lazy">
+                    <figcaption>
+                        <h3>Harry Potter e o Cálice de Fogo</h3>
+                        <p>J. k. Rowlling</p>
+                    </figcaption>
+                </figure>
+                <a href="pagina-ver-mais" class="btn-ver-mais">ver mais</a>
+            </article>
+        </section>
+    </main>
+    
+    <footer>
+        
+    </footer>
+
+    <script type="module" src="Assets/JS/main.js" ></script>
+</body>
+</html>
+
