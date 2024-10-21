@@ -17,21 +17,18 @@ namespace PrjNewBibliotec.lib {
 
             if (!String.IsNullOrEmpty(Request["f"])) {
                 string filter = Request["f"].ToString();
-
                 ErrorDataResponse<List<Book>> resultList = new BookController().LoadBooksNonFilter();
+
                 if (resultList.IsError) {
                     resp = "{\"situation\":\"" + resultList.ErrorMsg + "\"}";
-                    Response.Write(resp);
-                    return;
                 }
+                else {
+                    JavaScriptSerializer json = new JavaScriptSerializer();
+                    resp = json.Serialize(resultList.Data);
+                }
+            }
 
-                JavaScriptSerializer json = new JavaScriptSerializer();
-                resp = json.Serialize(resultList.Data);
-                Response.Write(resp);
-            }
-            else {
-                Response.Write(resp);
-            }
+            Response.Write(resp);
         }
     }
 }

@@ -9,25 +9,26 @@ form.onsubmit = (e) => {
 if (srcBtn != null) {
     srcBtn.addEventListener('click', search)
 }
+
 async function search() {
     if (srcBar.value == "") {
         srcBar.focus();
-        return;
     }
-
-    await fetch('../../lib/ManageSearch.aspx?f=' + srcBar.value).then((resp) => {
-        return resp.json();
-    }).then((data) => {
-        if (data != null) {
-            if (data["situation"] != null) {
-                srcBar.focus();
-                console.log(data["situation"]);
-                return;
+    else {
+        await fetch('../../lib/ManageSearch.aspx?f=' + srcBar.value).then((resp) => {
+            return resp.json();
+        }).then((data) => {
+            if (data != null) {
+                if (data["situation"] != null) {
+                    srcBar.focus();
+                    console.log(data["situation"]);
+                }
+                else {
+                    for (let i = 0; i < data.length; i++) {
+                        console.log(data[i]["Name"]);
+                    }
+                }
             }
-            
-            for (let i = 0; i < data.length; i++) {
-                console.log(data[i].Name);
-            }
-        }
-    });
+        });
+    }
 }
