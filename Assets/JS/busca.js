@@ -1,13 +1,11 @@
 let form = document.getElementById('form-pesquisa');
-let srcBar = document.getElementById('bar-pesquisa');
-let srcBtn = document.getElementById('btn-pesquisa');
+let srcBar = form.firstChild.nextSibling;
+
+let resultRegion = document.getElementById('regiao-resultado-pesquisa');
 
 form.onsubmit = (e) => {
     e.preventDefault();
-}
-
-if (srcBtn != null) {
-    srcBtn.addEventListener('click', search)
+    search();
 }
 
 async function search() {
@@ -15,7 +13,9 @@ async function search() {
         srcBar.focus();
     }
     else {
-        await fetch('../../lib/ManageSearch.aspx?f=' + srcBar.value).then((resp) => {
+
+        let filter = encodeURIComponent(srcBar.value);
+        await fetch('../../lib/ManageSearch.aspx?f=${ filter }').then((resp) => {
             return resp.json();
         }).then((data) => {
             if (data != null) {
@@ -24,8 +24,22 @@ async function search() {
                     console.log(data["situation"]);
                 }
                 else {
+                    let h2 = resultRegion.firstElementChild;
+                    h2.textContent = 'Resultados para ${ srcBar.value }';
                     for (let i = 0; i < data.length; i++) {
-                        console.log(data[i]["Name"]);
+                        let article = document.createElement('article');
+                        article.classList.add('item-resultado-pesquisa');
+
+                        let figure = document.creatElement('figure');
+
+                        let img = document.createElement('img');
+                        img.src = 'Assets/img/livros/livro1.jpg';
+                        img.alt = 'Imagem referente a capa do livro ${ data[i]["Name"] }';
+                        img.height = '300';
+                        img.loading = 'lazy';
+
+                        let figCaption = document.createElement('figcaption');
+                        
                     }
                 }
             }

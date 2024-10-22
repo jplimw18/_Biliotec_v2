@@ -42,21 +42,21 @@ header nav{
     align-items: center;
 }
 
-#logo{
+.logo{
     text-decoration: none;
 }
 
-#logo figure{
+.logo figure{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#logo figure img{
+.logo figure img{
     height: 100px;
 }
 
-#logo figure figcaption{
+.logo figure figcaption{
     font-size: 30px;
     font-family: fredoka;
     
@@ -69,7 +69,7 @@ form{
     align-items: center;
 }
 
-#bar-pesquisa{
+.bar-pesquisa{
     width: 30vw;
     height: 45px;
 
@@ -87,12 +87,12 @@ form{
     box-sizing: border-box;
 }
 
-#bar-pesquisa:focus{
+.bar-pesquisa:focus{
     border: 3px solid #96dad9;
     outline: none;
 }
 
-#btn-pesquisa{
+.btn-pesquisa{
     width: 45px;
     height: 45px;
 
@@ -108,7 +108,7 @@ form{
     cursor: pointer;
 }
 
-#btn-pesquisa:hover{
+.btn-pesquisa:active{
     background: url(../img/search-icon-invert.png) no-repeat center center;
     background-color: #96dad9;
 }
@@ -128,6 +128,7 @@ form{
     height: 45px;
 
     font-size: 16px;
+    font-family: fredoka; 
 
     border: none;
     border-radius: 15px;
@@ -145,22 +146,7 @@ form{
     outline: 1px solid #96dad9;
 }
 
-#btn-login-cadastro figure{
-    width: 80%;
-    height: 100%;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#btn-login-cadastro figure figcaption{
-    width: 70%;
-
-    font-family: fredoka !important;
-}
-
-#btn-login-cadastro figure img{
+#btn-login-cadastro img{
     height: 100%;
 
     padding: 5px;

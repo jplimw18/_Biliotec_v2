@@ -9,24 +9,16 @@
 <body>
     <header>
         <nav>
-            <a href="index.html" id="logo">
+            <a href="index.html" class="logo">
                 <figure>
                     <img src="Assets/img/biblioteca-icon.png" alt="Logo BIBLIOTEC">
                     <figcaption>Bibliotec</figcaption>
                 </figure>
             </a>
             
-            <form action="" method="get" id="form-pesquisa">
-                <!-- <select name="filtro-pesquisa" id="filtro-pesquisa">
-                    <option value="todos" selected>Todos</option>
-                    <option value="historia">História</option>
-                    <option value="ficcao">Ficção</option>
-                    <option value="filosofia">Filosofia</option>
-                    <option value="investigacao">Investigação</option>
-                    <option value="tecnologia">Tecnologia</option>
-                </select> -->
-                <input type="text" name="bar-pesquisa" id="bar-pesquisa" placeholder="Livros, autores...">
-                <button type="submit" id="btn-pesquisa"></button>
+            <form id="form-pesquisa">
+                <input type="text" name="bar-pesquisa" class="bar-pesquisa" placeholder="Livros, autores...">
+                <button type="submit" class="btn-pesquisa"></button>
             </form>
             
             <ul id="menu">
@@ -40,7 +32,7 @@
                     </Button>
 
                     <section id="regiao-login" aria-label="Região login" class="escondido">
-                        <form action="" method="post" id="form-login">
+                        <form id="form-login">
                             <button id="btn-close-login">
                                 <img src="Assets/img/close.png" alt="Fechar área login">
                             </button>
@@ -65,7 +57,7 @@
                         <img src="Assets/img/Triangle-invert.png" alt="Botão Mais opções">
                     </button>
                     
-                    <section id="regiao-mais-opcoes" class="escondido">
+                    <div id="regiao-mais-opcoes" class="escondido">
                         <ul>
                             <li class="item-mais-opcoes">
                                 <figure>
@@ -92,7 +84,7 @@
                                 </figure>
                             </li>
                         </ul>
-                    </section>
+                    </div>
                 </li>
             </ul>
         </nav>
@@ -100,7 +92,7 @@
     
     <main>
         
-        <section aria-label="região resultados de pesquisa" class="main-regions" id="regiao-resultado-pesquisa">
+        <section aria-label="região resultados de pesquisa" class="main-regions escondido" id="regiao-resultado-pesquisa">
             <h2>Resultados para "Harry Potter"</h2>
             
             <article class="item-resultado-pesquisa">
